@@ -3,9 +3,299 @@
     font-family: sans-serif;
     font-size: 18px;
 
-    max-width: 700px;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 1em;
+    padding: 0;
 
     color: #000;
+}
+
+button {
+    color: #fff;
+    background: #000;
+    padding: 15px 50px;
+    border: none;
+    border-radius: 5px;
+}
+
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header {
+    width: 100%;
+    height: 150px;
+    color:#000000;
+    border-bottom: 5px solid #000000;
+    display: block;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+        width: 200px;
+        max-width: 300px;
+        line-height: 175px;
+        display: inline-block;
+        padding: 0;
+    }
+
+    nav {
+        display: inline-block;
+        float: right;
+    }
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: baseline;
+        
+        li {
+            margin: 0 40px;
+            text-transform: uppercase;
+            line-height: 150px;
+            
+            a {
+                text-decoration: none;
+                font-size: 16px;
+                color: #000000;
+                font-weight: 300;
+
+                &:hover,
+                &:active {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.section-top {
+    background: #e5e5e5;
+    padding: 0;
+    margin: 0;
+
+    .wrapper {
+        padding: 150px 150px 250px 150px;
+
+        h1 {
+            font-size: 60px;
+            padding-top: 0;
+            margin-top: 0;
+            line-height: 60px;
+        }
+        h2 {
+            font-size: 40px;
+            margin: 0;
+        }
+    }
+}
+
+.section-middle {
+    margin-top: -150px;
+    .grid {
+        width: 30%;
+        padding: 10px;
+        margin: 20px 0 0 20px;
+        display: inline-block;
+        background: #fff;
+        vertical-align: top;
+        -webkit-box-shadow: 0 0 3px 1px #aaaaaa;
+        -moz-box-shadow: 0 0 3px 1px #aaaaaa;
+        box-shadow: 0 0 3px 1px #aaaaaa;
+
+        .article-image {
+            background: #e5e5e5;
+            display: block;
+            height: 200px;
+        }
+
+        .article-title {
+            font-size: 32px;
+            margin-top: 20px;
+        }
+
+        .article-date {
+            font-size: 20px;
+        }
+
+        .article-content {
+            margin-top: 20px;
+        }
+    }
+    .grid:nth-child(1) {
+        margin-left: 0;
+    } 
+    .grid:nth-child(2) {
+        .article-image {
+            background: #999999;
+        }
+    } 
+    .grid:nth-child(3) {
+        .article-image {
+            background: #555555;
+        }
+    } 
+}
+
+.section-bottom {
+    padding: 100px 0;
+
+    .image-wrap {
+        width: 40%;
+        height: 480px;;
+        display: inline-block;
+        vertical-align: top;
+        padding: 20px;
+        -webkit-box-shadow: 0 0 3px 1px #aaaaaa;
+        -moz-box-shadow: 0 0 3px 1px #aaaaaa;
+        box-shadow: 0 0 3px 1px #aaaaaa;;
+        
+        .image {
+            background: #999999;
+            display: block;
+            height: 100%;;
+        }
+    }
+    .content-wrap {
+        width: 48%;
+        display: inline-block;
+        vertical-align: top;
+        padding: 0 0 0 5%;;
+
+        .title {
+            padding: 0;
+            margin-block-start: 0;
+            margin-block-end: 0;
+            font-size: 40px;
+        }
+
+        .sub-title {
+            font-size: 26px;
+            padding: 0;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+
+        .content {
+            margin: 40px 0;
+            font-size: 22px;
+            line-height: 40px;
+            font-weight: 400;
+        }
+    }
+}
+.footer {
+    border-top: 4px solid #000000;
+    padding: 20px 0;
+    margin-top: 20px;
+    font-size: 14px;
+
+    span {
+        width: 50%;
+        display: inline-block;
+    }
+    span.left {
+        text-align: left;
+    }
+    span.right {
+        text-align: right;
+    }
+}
+
+@media screen and (min-width: 724px) and (max-width: 1025px){
+    .header ul li {
+        margin: 0 15px;
+    }
+    .section-top {
+        .wrapper {
+            padding: 50px 50px 150px 50px;
+        }
+    }
+    .section-middle {
+        .grid {
+            width: 28%;
+
+            .article-image {
+                height: 120px;
+            }
+        }
+    }
+    .section-bottom {
+        .image-wrap {
+            height: 350px;;
+        }
+        .content-wrap {
+            .title {
+                font-size: 24px;
+            }
+            .sub-title {
+                font-size: 18px;;
+            }
+            .content {
+                margin: 24px 0;
+                font-size: 16px;
+                line-height: 30px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 724px) {
+    .header {
+        height: 100px;
+
+        .logo {
+            line-height: 50px;
+            text-align: center;
+            margin: 0 auto;
+            display: block;
+        }
+        ul {
+            li {
+                margin: 0 5px;
+                line-height: 0px;
+            }
+        }
+    }
+    .section-top {
+        .wrapper {
+            padding: 20px 20px 50px 20px;
+            h1 {font-size: 24px;line-height: 24px;}
+            h2 {font-size: 20px;}
+        }
+    }
+    .section-middle {
+        margin-top: -30px;
+        .grid {
+            width: 95%;
+            position: relative;
+            margin: 0;
+        }
+    }
+    .section-bottom {
+        .image-wrap {
+            width: 95%;
+            padding: 10px;
+            height: 200px;
+        }
+        .content-wrap {
+            width: 95%;
+            .title {
+                margin-top: 20px;
+                font-size: 26px;
+            }
+            .sub-title {
+                font-size: 18px;
+            }
+        }
+        .content {
+            margin: 10px 0 !important;
+            font-size: 14px !important;
+            line-height: 20px !important;
+        }
+    }
 }
